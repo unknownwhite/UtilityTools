@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>HOME</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Number & String Utility Tool</h1>
+        <form action="/swap" method="post">
+            <h2>Swap Two Numbers</h2>
+            <input type="number" name="a" placeholder="Enter Number a" required>
+            <input type="number" name="b" placeholder="Enter Number b" required>
+            <button type="submit">  
+                Swap
+            </button>
+        </form>
+
+        <form action="/odd_even" method="post">
+            <h2>
+                Check if Number is Odd or Even
+            </h2>
+            <input type="number" name="num" placeholder="Enter a Number:" required>
+            <button type="submit">
+                Check
+            </button>
+        </form>
+
+        <form action="/ascii" method="post">
+            <h2>Check the Character's ASCII Number</h2>
+            <input type="text" name="ascii_char" placeholder="Enter a Single Character:" required>
+            <button type="submit">Get</button>
+        </form>
+
+        {% if result %}
+        <div class="result">
+            <h3>Result: {{ result }}</h3>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
